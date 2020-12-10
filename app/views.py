@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Photo
+from .models import Photo, Work
+from django.conf import settings
 
 # Create your views here.
 @csrf_exempt
@@ -12,3 +13,8 @@ def photo(request):
         photos_.append({"id":photo.id, "url": photo.url})
     return photos_
     # return render(request, "photo.html", {"photos": photos_})
+
+@csrf_exempt
+def photo(request):
+    works = Work.objects.all()
+    return HttpResponse(works)

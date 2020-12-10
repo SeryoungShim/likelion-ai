@@ -19,9 +19,6 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
     path('work/', views.work, name='work'),
-=======
     path('photo/', views.photo, name="photo"),
->>>>>>> acb38c0a77815f21f2f5f4b5467037be3a86bf04
 ]

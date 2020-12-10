@@ -19,5 +19,6 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('work/', views.work, name='work'),
     path('photo/', views.photo, name="photo"),
 ]
